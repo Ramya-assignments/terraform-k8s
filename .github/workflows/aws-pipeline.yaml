@@ -24,7 +24,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::356627769515:role/terraform-k8s/github-action-role
+          role-to-assume: arn:aws:iam::356627769515:role/terraform-k8s
           aws-region: us-east-1
 
       # ================= Terraform =================
@@ -47,3 +47,4 @@ jobs:
         run: |
           cd terraform/aws
           terraform apply -auto-approve
+          
